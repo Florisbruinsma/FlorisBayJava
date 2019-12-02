@@ -1,0 +1,426 @@
+body {
+    background: #76b852; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #76b852, #8DC26F);
+    background: -o-linear-gradient(right, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+}
+fieldset {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    border: 0;
+}
+/*===============================
+=            Item page          =
+===============================*/
+.item_page{
+	padding-left:160px;
+}
+h3 {font-size: 18px;line-height: 1.5em;}
+hr.soften {margin: 8px 0;background: #DDD;}
+.form-horizontal.qtyFrm .control-label{text-align: left;}
+.form-horizontal.qtyFrm .control-label span{font-size:18px}
+.clr{clear:both;}
+#productDetail {margin-bottom:0}
+.tabWrapper{background:#fff; padding:14px; border:1px solid #ddd; border-top:0}
+.alignR{text-align:right;}
+.control-label.alignL, .alignL{text-align:left;}
+.shopBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;color: #fff;border-radius: 2px;background: #f89406;display:inline-block;padding:0 12px;border:0;}
+.shopBtn:hover {color: #fff; text-decoration:none; background:#F86706}
+
+/*===============================
+=            Form            =
+===============================*/
+.new_item{
+	padding-left:160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+/*===============================
+=            Navbar            =
+===============================*/
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*===============================
+=            Choices            =
+===============================*/
+.choices {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+.choices[data-type*="select-multiple"] .choices__inner, .choices[data-type*="text"] .choices__inner {
+    cursor: text;
+}
+
+.choices[data-type*="select-multiple"] .choices__button, .choices[data-type*="text"] .choices__button {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-right: -4px;
+    margin-bottom: 0;
+    margin-left: 8px;
+    padding-left: 16px;
+    border-left: 1px solid #008fa1;
+    background-size: 8px;
+    width: 8px;
+    line-height: 1;
+    opacity: .75;
+}
+
+.choices[data-type*="select-multiple"] .choices__button:hover, .choices[data-type*="select-multiple"] .choices__button:focus, .choices[data-type*="text"] .choices__button:hover, .choices[data-type*="text"] .choices__button:focus {
+    opacity: 1;
+}
+
+.choices__inner {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 7.5px 7.5px 3.75px;
+    border: 1px solid #DDDDDD;
+    border-radius: 2.5px;
+    font-size: 14px;
+    min-height: 44px;
+    overflow: hidden;
+}
+
+.is-focused .choices__inner, .is-open .choices__inner {
+    border-color: #b7b7b7;
+}
+
+.is-open .choices__inner {
+    border-radius: 2.5px 2.5px 0 0;
+}
+
+.choices__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+
+.choices__list--multiple {
+    display: inline;
+}
+
+.choices__list--multiple .choices__item {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 3.75px;
+    margin-bottom: 3.75px;
+    background-color: #00BCD4;
+    border: 1px solid #00a5bb;
+    color: #000000;
+    word-break: break-all;
+}
+
+.choices__list--multiple .choices__item[data-deletable] {
+    padding-right: 5px;
+}
+
+.choices__list--multiple .choices__item.is-highlighted {
+    background-color: #00a5bb;
+    border: 1px solid #008fa1;
+}
+
+
+.choices__list--dropdown {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    top: 100%;
+    margin-top: -1px;
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.choices__list--dropdown.is-active {
+    display: block;
+}
+
+.is-open .choices__list--dropdown {
+    border-color: #b7b7b7;
+}
+
+
+.choices__list--dropdown .choices__item {
+    position: relative;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.choices__item {
+    cursor: default;
+}
+
+.choices__item--selectable {
+    cursor: pointer;
+}
+
+.choices__button {
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+        appearance: none;
+    border: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.choices__input {
+    display: inline-block;
+    vertical-align: baseline;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border: 0;
+    border-radius: 0;
+    width: 160px !important;
+    padding: 4px 0 4px 2px;
+}
+
+.choices__input:focus {
+    outline: 0;
+}
+
+/*=====  End of Choices  ======*/
+* {
+    box-sizing: border-box;
+}
+
+.s005 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-position: center center;
+    padding: 15px;
+    padding-left:160px;
+}
+
+.s005 form {
+    width: 100%;
+    max-width: 790px;
+}
+
+.s005 form legend {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+}
+
+.s005 form .inner-form {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.s005 form .inner-form .input-field {
+    width: 100%;
+    position: relative;
+}
+
+.s005 form .inner-form .input-field .choices {
+    margin-bottom: 0;
+}
+
+.s005 form .inner-form .input-field .choices .choices__inner {
+    min-height: 70px;
+    width: 100%;
+    border: 0;
+    background: #F2F2F2;
+    display: block;
+    width: 100%;
+    padding: 10px 70px 6.25px 32px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
+}
+
+.s005 form .inner-form .input-field .choices .choices__inner .choices__list .choices__item {
+    background: rgba(17, 17, 17, 0.2);
+    color: #000;
+    line-height: 33px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.s005 form .inner-form .input-field .choices .choices__inner .choices__list .choices__item .choices__button {
+    border-left: 0;
+    color: #b2b2b2;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' fill='white' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+    background-size: 14px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 0;
+    opacity: .3;
+    transition: all .2s ease-out, color .2s ease-out;
+}
+
+.s005 form .inner-form .input-field .choices .choices__inner .choices__list .choices__item .choices__button:hover {
+    opacity: 1;
+}
+
+.s005 form .inner-form .input-field .choices .choices__inner .choices__input {
+    font-size: 16px;
+    color: #000000;
+    background-color: transparent;
+}
+
+.s005 form .inner-form .input-field .choices .choices__list--dropdown {
+    background: transparent;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    padding: 0 32px;
+}
+
+.s005 form .inner-form .input-field .choices .choices__list--dropdown .choices__item {
+    font-size: 13px;
+    height: 25px;
+    line-height: 1.3;
+    padding: 0;
+    padding-top: 5px;
+    opacity: .7;
+}
+
+.s005 form .inner-form .input-field .btn-search {
+    width: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    align-items: center;
+}
+
+.s005 form .inner-form .input-field .btn-search svg {
+    fill: #ccc;
+    width: 40px;
+    height: 40px;
+    transition: all .2s ease-out, color .2s ease-out;
+}
+
+.s005 form .inner-form .input-field .btn-search:hover, .s005 form .inner-form .input-field .btn-search:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.s005 form .inner-form .input-field .btn-search:hover svg, .s005 form .inner-form .input-field .btn-search:focus svg {
+    fill: #000;
+}
+
+.s005 form .suggestion-wrap {
+    padding: 0;
+}
+
+.s005 form .suggestion-wrap span {
+    font-size: 14px;
+    font-family: 'Helvetica', sans-serif;
+    display: inline-block;
+    padding: 0;
+    line-height: 32px;
+    color: #fff;
+    border-radius: 16px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+}
+
